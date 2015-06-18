@@ -162,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="-338" y="568"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Dianosed Happiness View Controller-->
         <scene sceneID="1bz-7f-xe7">
             <objects>
-                <viewController id="Iz7-64-8mS" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Iz7-64-8mS" customClass="DianosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bca-Oh-i66"/>
                         <viewControllerLayoutGuide type="bottom" id="caN-7i-1L6"/>
@@ -199,7 +199,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="FII-Lb-ATS" secondAttribute="trailing" constant="-20" id="z3b-ub-Pa6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qti-Dp-3gM"/>
+                    <navigationItem key="navigationItem" id="qti-Dp-3gM">
+                        <barButtonItem key="rightBarButtonItem" title="历史" id="MJY-wg-JMT">
+                            <connections>
+                                <segue destination="5s1-XI-3Bd" kind="popoverPresentation" identifier="ShowDiagnosticHistiory" popoverAnchorBarButtonItem="MJY-wg-JMT" id="gDf-jc-VW7">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="FII-Lb-ATS" id="fdt-3C-jM8"/>
                     </connections>
@@ -212,6 +220,41 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1439" y="1087"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="Dbw-FQ-Xx5">
+            <objects>
+                <viewController id="5s1-XI-3Bd" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zl1-Jl-Amq"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWf-yZ-aLn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xQu-AY-CkU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-yV-Xck">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="592"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dgg-yV-Xck" firstAttribute="leading" secondItem="xQu-AY-CkU" secondAttribute="leading" id="H9z-DJ-kro"/>
+                            <constraint firstAttribute="trailing" secondItem="dgg-yV-Xck" secondAttribute="trailing" id="U73-zR-itM"/>
+                            <constraint firstItem="FWf-yZ-aLn" firstAttribute="top" secondItem="dgg-yV-Xck" secondAttribute="bottom" constant="8" symbolic="YES" id="aOY-us-pwg"/>
+                            <constraint firstItem="dgg-yV-Xck" firstAttribute="top" secondItem="xQu-AY-CkU" secondAttribute="topMargin" id="g1w-Bs-kdt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="dgg-yV-Xck" id="GM0-W6-9Sf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EiO-aF-FYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="1087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rYy-xq-Q5c">
