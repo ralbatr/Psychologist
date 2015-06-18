@@ -11,7 +11,13 @@ import UIKit
 class PsychologistViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let hvc = segue.destinationViewController as? HappinessViewController {
+        // 获取当前navgationview堆栈上最上边的vc
+        var destination = segue.destinationViewController as? UIViewController
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController
+        }
+        // 如果当前vc是happinessvc
+        if let hvc = destination as? HappinessViewController {
             if let identifier = segue.identifier {
                 switch identifier {
                     case "sad": hvc.happiness = 0
