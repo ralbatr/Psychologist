@@ -9,6 +9,12 @@
 import UIKit
 
 class PsychologistViewController: UIViewController {
+    
+    
+    @IBAction func donothing(sender: UIButton) {
+        performSegueWithIdentifier("nothing", sender: nil)
+    }
+    
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // 获取当前navgationview堆栈上最上边的vc
@@ -22,6 +28,7 @@ class PsychologistViewController: UIViewController {
                 switch identifier {
                     case "sad": hvc.happiness = 0
                     case "happy": hvc.happiness = 100
+                    case "nothing": hvc.happiness = 25
                     default : hvc.happiness = 50
                 }
             }

@@ -95,6 +95,15 @@
                                     <segue destination="O1Q-Hx-K5s" kind="showDetail" identifier="no" id="KJA-Kh-Mze"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0C-J6-Y1z">
+                                <rect key="frame" x="264" y="412" width="30" height="30"/>
+                                <state key="normal" title="代码">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zih-ef-PO8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -104,7 +113,9 @@
                             <constraint firstItem="Eeg-tI-fVm" firstAttribute="leading" secondItem="66R-Sp-D9S" secondAttribute="leading" id="ArI-xc-L75"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="66R-Sp-D9S" secondAttribute="bottom" constant="282" id="Cly-RK-nPl"/>
                             <constraint firstItem="v2y-n1-7zQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="220" id="FzL-VT-MWf"/>
+                            <constraint firstItem="F0C-J6-Y1z" firstAttribute="top" secondItem="v2y-n1-7zQ" secondAttribute="bottom" constant="20" id="G5K-uL-iPh"/>
                             <constraint firstAttribute="centerX" secondItem="Eeg-tI-fVm" secondAttribute="centerX" id="Ka7-kC-3Zn"/>
+                            <constraint firstItem="F0C-J6-Y1z" firstAttribute="leading" secondItem="v2y-n1-7zQ" secondAttribute="leading" id="Lyc-g7-APp"/>
                             <constraint firstItem="swO-A1-tAB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Nju-CV-nLy"/>
                             <constraint firstItem="66R-Sp-D9S" firstAttribute="centerX" secondItem="swO-A1-tAB" secondAttribute="centerX" id="Tgh-Xv-XbL"/>
                             <constraint firstAttribute="centerY" secondItem="66R-Sp-D9S" secondAttribute="centerY" id="XyB-G0-qab"/>
@@ -130,6 +141,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Pyschologist" id="WPN-Z5-uXu"/>
+                    <connections>
+                        <segue destination="O1Q-Hx-K5s" kind="showDetail" identifier="nothing" id="9wE-0t-CIK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,6 +251,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="scv-lC-gv8"/>
+        <segue reference="9wE-0t-CIK"/>
     </inferredMetricsTieBreakers>
 </document>
