@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在梦里你看到什么？我要字数足够多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="swO-A1-tAB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="在梦里你看到什么？我要字数足够多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="swO-A1-tAB">
                                 <rect key="frame" x="16" y="28" width="568" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,17 +120,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="WPN-Z5-uXu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="203"/>
+            <point key="canvasLocation" x="1439" y="203"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="xhb-1S-O8D">
             <objects>
                 <splitViewController id="FB4-bg-8Th" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="masterViewController" id="0Wc-Ml-vcv"/>
+                        <segue destination="fCG-eK-NEd" kind="relationship" relationship="masterViewController" id="0Wc-Ml-vcv"/>
                         <segue destination="Iz7-64-8mS" kind="relationship" relationship="detailViewController" id="gcF-8c-Gd7"/>
                     </connections>
                 </splitViewController>
@@ -187,6 +188,24 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="627" y="1152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rYy-xq-Q5c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fCG-eK-NEd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgm-Qu-MiS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IBs-Fz-y0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S19-cN-B2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="203"/>
         </scene>
     </scenes>
 </document>
