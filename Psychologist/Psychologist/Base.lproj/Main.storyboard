@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Psychologist View Controller-->
+        <!--Pyschologist-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PsychologistViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="在梦里你看到什么？我要字数足够多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="swO-A1-tAB">
-                                <rect key="frame" x="16" y="28" width="568" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在梦里你看到什么？我要字数足够多" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="swO-A1-tAB">
+                                <rect key="frame" x="16" y="72" width="568" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,6 +39,9 @@
                                         <exclude reference="Ydt-HY-EIE"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Iz7-64-8mS" kind="showDetail" identifier="happy" id="scv-lC-gv8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-tI-fVm">
                                 <rect key="frame" x="252" y="209" width="96" height="41"/>
@@ -60,6 +63,9 @@
                                         <exclude reference="enL-85-P57"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Iz7-64-8mS" kind="showDetail" identifier="sad" id="84E-Ky-0Ny"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2y-n1-7zQ">
                                 <rect key="frame" x="264" y="351" width="72" height="41"/>
@@ -85,6 +91,9 @@
                                         <exclude reference="yBo-sZ-GOV"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="Iz7-64-8mS" kind="showDetail" identifier="no" id="KJA-Kh-Mze"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -120,7 +129,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WPN-Z5-uXu"/>
+                    <navigationItem key="navigationItem" title="Pyschologist" id="WPN-Z5-uXu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,8 +160,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FII-Lb-ATS" customClass="FaceView" customModule="Psychologist" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FII-Lb-ATS" customClass="FaceView" customModule="Psychologist" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="0.0" width="608" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -208,4 +217,7 @@
             <point key="canvasLocation" x="627" y="203"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KJA-Kh-Mze"/>
+    </inferredMetricsTieBreakers>
 </document>
